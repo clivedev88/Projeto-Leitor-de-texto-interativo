@@ -45,7 +45,7 @@ body {
     height: 90vh;
     max-width: none;
     max-height: none;
-    overflow: hidden; /* adicionar barra de rolagem se necessário */
+    overflow: auto; /* adicionar barra de rolagem se necessário */
   }
   
   @media (min-width: 600px) {
@@ -105,10 +105,8 @@ body {
 
 
   .text {
-    font-size: 16px;
-    min-font-size: 14px; /* fonte mínima */
-    max-font-size: 20px; /* fonte máxima */
-    width: 90%; Definindo a largura da caixa de texto
+    font-size: 16px; 
+    /* width: 90%; Definindo a largura da caixa de texto */
     height: 90%; /* Altura automática para ajustar ao conteúdo */
     margin: 40px auto; /* Centralizando horizontalmente */
     text-align: justify; /* Justificando o texto */
