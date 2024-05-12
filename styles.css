@@ -73,6 +73,11 @@ body {
   .page {
     padding: 20px;
     position: relative;
+    display: none; /* esconder todas as páginas inicialmente */
+  }
+  
+  .page.active {
+    display: block; /* exibir apenas a página ativa */
   }
   
   .title {
@@ -85,6 +90,7 @@ body {
     font-size: 16px;
     min-font-size: 14px; /* fonte mínima */
     max-font-size: 20px; /* fonte máxima */
+    text-align: justify; /* justificar o texto */
   }
   
   .page-number {
@@ -170,3 +176,4 @@ body {
   .text-resize-buttons button:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
+  
