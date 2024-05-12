@@ -1,0 +1,19 @@
+1- Adicionar animações suaves: Use transições CSS para criar transições suaves ao alternar entre os temas claro e escuro, e ao navegar entre as páginas.
+
+2- Melhorar o layout da página: Experimente diferentes layouts para as páginas de modo a tornar a leitura mais agradável. Por exemplo, você pode centralizar o texto na página e ajustar o espaçamento entre linhas e parágrafos para uma melhor legibilidade.
+
+3- Adicionar feedback visual aos botões de navegação: Ao passar o mouse sobre os botões de próxima e anterior, você pode adicionar algum tipo de feedback visual, como uma mudança na cor do botão ou um efeito de sombra.
+
+4- Personalizar o botão de alternar tema: Em vez de apenas um botão de texto simples, você pode adicionar ícones ou símbolos que representem os temas claro e escuro. Isso tornará mais intuitivo para os usuários entenderem a função do botão.
+
+5- Adicionar uma barra de progresso: Uma barra de progresso na parte inferior da página pode indicar visualmente aos usuários em que ponto eles estão no livro. Isso também pode ser útil para pular rapidamente para uma determinada parte do livro.
+
+6. Permitir redimensionamento de texto: Adicione botões ou controles deslizantes para permitir que os usuários ajustem o tamanho do texto de acordo com suas preferências de leitura.
+
+Opções de fonte personalizada: Permita que os usuários escolham entre diferentes tipos de fonte para a leitura, proporcionando uma experiência mais personalizada.
+
+Modo de tela cheia: Adicione um botão de tela cheia para permitir que os usuários concentrem-se apenas na leitura, sem distrações.
+
+Suporte para dispositivos móveis: Certifique-se de que o aplicativo seja responsivo e tenha uma boa experiência de usuário em dispositivos móveis, incluindo gestos de navegação intuitivos, como deslizar para passar as páginas.
+
+Adicionar uma página de configurações: Crie uma página de configurações onde os usuários possam personalizar diferentes aspectos do aplicativo, como o tema padrão, tamanho do texto, preferências de fonte, etc.

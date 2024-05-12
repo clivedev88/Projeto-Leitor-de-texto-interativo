@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leitor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+  <div id="reader" class="reader">
+    <header>
+      <h1 class="title">Título do Texto</h1>
+    </header>
+    <div class="pages-container">
+      <div class="page">
+        <p class="text">Página 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="page">
+        <p class="text">Página 2: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="page">
+        <p class="text">Página 3: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="page">
+        <p class="text">Página 4: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <button id="decrease-font" class="text-resize-button">-</button>
+    <button id="prev-page" class="navigation-button">&lt;</button>
+    <input type="number" id="page-input" class="page-input" min="1" max="4" value="1">
+    <button id="next-page" class="navigation-button">&gt;</button>
+    <button id="increase-font" class="text-resize-button">+</button>
+    <button id="theme-toggle" class="theme-toggle">
+      <img src="./App de Leitura/sun-icon-vector-removebg-preview.png" alt="Light Mode" class="light-mode-icon">
+    </button>
+    <div class="progress-bar-container">
+      <div class="progress-bar"></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
