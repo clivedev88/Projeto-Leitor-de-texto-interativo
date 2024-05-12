@@ -23,6 +23,7 @@ themeToggle.addEventListener('click', () => {
 
 // Função para exibir a página atual
 // Função para exibir a página atual
+// Função para exibir a página atual
 function showPage(pageNumber) {
     pages.forEach((page, index) => {
       if (index === currentPage) {
@@ -32,17 +33,16 @@ function showPage(pageNumber) {
         page.classList.add('prev');
       } else {
         page.classList.remove('prev');
+        page.classList.remove('active');
         page.classList.add('next');
       }
       if (index === pageNumber) {
         page.classList.add('active');
-      } else {
-        page.classList.remove('active');
       }
     });
     updateProgressBar(pageNumber); // Atualiza a barra de progresso ao exibir uma nova página
   }
-  
+    
 // Adicionando a classe 'active' à página inicial
 pages[currentPage].classList.add('active');
 
