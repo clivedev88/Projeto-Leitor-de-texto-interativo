@@ -22,19 +22,29 @@ themeToggle.addEventListener('click', () => {
 });
 
 // Função para exibir a página atual
+// Função para exibir a página atual
 function showPage(pageNumber) {
-  pages.forEach((page, index) => {
-    if (index === pageNumber) {
-      page.style.display = 'block';
-    } else {
-      page.style.display = 'none';
-    }
-  });
-  updateProgressBar(pageNumber); // Atualiza a barra de progresso ao exibir uma nova página
-}
-
+    pages.forEach((page, index) => {
+      if (index === currentPage) {
+        page.classList.remove('next', 'prev');
+      } else if (index < currentPage) {
+        page.classList.remove('next');
+        page.classList.add('prev');
+      } else {
+        page.classList.remove('prev');
+        page.classList.add('next');
+      }
+      if (index === pageNumber) {
+        page.classList.add('active');
+      } else {
+        page.classList.remove('active');
+      }
+    });
+    updateProgressBar(pageNumber); // Atualiza a barra de progresso ao exibir uma nova página
+  }
+  
 // Adicionando a classe 'active' à página inicial
-pages[currentPage].style.display = 'block';
+pages[currentPage].classList.add('active');
 
 // Event listeners para navegação entre páginas
 prevPageButton.addEventListener('click', () => {
