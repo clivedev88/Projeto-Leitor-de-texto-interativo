@@ -104,13 +104,24 @@ body {
 }
 
 
-  .text {
+.text {
     font-size: 16px; 
     /* width: 90%; Definindo a largura da caixa de texto */
+    min-font-size: 14px; /* fonte mínima */
+    max-font-size: 20px; /* fonte máxima */
     margin: 40px auto; /* Centralizando horizontalmente */
     text-align: justify; /* Justificando o texto */
     line-height: 1.5; /* Espaçamento entre linhas */
     overflow: hidden; /* Oculta o conteúdo fora da caixa de texto */
+    height: auto; /* Altura automática */
+  }
+  
+    
+  /* Alteração para afetar todos os parágrafos dentro de uma página */
+  .page .text {
+    font-size: inherit;
+    min-font-size: inherit;
+    max-font-size: inherit;
   }
   
   

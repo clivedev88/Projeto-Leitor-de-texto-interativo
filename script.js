@@ -90,7 +90,7 @@ function changeFontSize(action) {
   let newFontSize;
 
   if (action === 'increase') {
-    newFontSize = Math.min(currentFontSize + 2, 20); // Limite máximo de 20px
+    newFontSize = Math.min(currentFontSize + 2, 30); // Limite máximo de 30px
   } else if (action === 'decrease') {
     newFontSize = Math.max(currentFontSize - 2, 14); // Limite mínimo de 14px
   }
