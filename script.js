@@ -8,6 +8,9 @@ const progressBar = document.querySelector('.progress-bar');
 const increaseFontButton = document.getElementById('increase-font');
 const decreaseFontButton = document.getElementById('decrease-font');
 const bookmarkButton = document.getElementById('bookmark-page');
+const highlightButton = document.getElementById('highlight-text');
+const unhighlightButton = document.getElementById('unhighlight-text');
+const highlightColorSelect = document.getElementById('highlight-color');
 let currentPage = 0;
 let bookmarks = [];
 
@@ -17,9 +20,9 @@ themeToggle.addEventListener('click', () => {
   body.classList.toggle('light-mode');
 
   if (body.classList.contains('dark-mode')) {
-    themeToggle.innerHTML = '<img src="sun-icon-vector-removebg-preview.png" alt="Light Mode" class="light-mode-icon">';
+    themeToggle.innerHTML = '<img src="./App de Leitura/sun-icon-vector-removebg-preview.png" alt="Light Mode" class="light-mode-icon">';
   } else {
-    themeToggle.innerHTML = '<img src="Moon-removebg-preview.png" alt="Dark Mode" class="dark-mode-icon">';
+    themeToggle.innerHTML = '<img src="./App de Leitura/Moon-removebg-preview.png" alt="Dark Mode" class="dark-mode-icon">';
   }
 });
 
@@ -124,3 +127,39 @@ function updateBookmarks() {
     }
   });
 }
+
+// Função para marcar texto
+highlightButton.addEventListener('click', () => {
+  const selectedText = window.getSelection().toString();
+  if (selectedText) {
+    const range = window.getSelection().getRangeAt(0);
+    const span = document.createElement('span');
+    span.classList.add('highlight');
+    span.classList.add(highlightColorSelect.value);
+    span.appendChild(range.extractContents());
+    range.insertNode(span);
+  }
+});
+
+// Função para desmarcar texto
+unhighlightButton.addEventListener('click', () => {
+  const selectedText = window.getSelection();
+  if (selectedText.rangeCount > 0) {
+    const range = selectedText.getRangeAt(0);
+    const container = range.commonAncestorContainer;
+    if (container.nodeType === 3) {
+      const parent = container.parentNode;
+      if (parent.classList.contains('highlight')) {
+        parent.replaceWith(...parent.childNodes);
+      }
+    }
+  }
+});
+
+// Melhorias futuras sugeridas:
+// 1. Implementar um sistema de notas onde os usuários podem adicionar anotações a textos destacados.
+// 2. Adicionar suporte para sincronização com a nuvem para que os usuários possam salvar suas marcas e destaques em diferentes dispositivos.
+// 3. Melhorar a navegação com a adição de um índice ou menu de capítulos.
+// 4. Adicionar uma função de pesquisa que permita aos usuários encontrar palavras ou frases específicas dentro do texto.
+// 5. Implementar um sistema de favoritos para marcar e acessar rapidamente passagens ou páginas preferidas.
+// 6. Adicionar um modo de leitura noturna ajustável com opções de personalização para diminuir a fadiga ocular.

@@ -39,3 +39,10 @@ Adicionar suporte para navegação por gestos em dispositivos móveis para uma e
 Marcadores:
 
 Adicionar a funcionalidade de marcadores para que os usuários possam marcar páginas importantes e retornar a elas facilmente.
+// Melhorias futuras sugeridas:
+// 1. Implementar um sistema de notas onde os usuários podem adicionar anotações a textos destacados.
+// 2. Adicionar suporte para sincronização com a nuvem para que os usuários possam salvar suas marcas e destaques em diferentes dispositivos.
+// 3. Melhorar a navegação com a adição de um índice ou menu de capítulos.
+// 4. Adicionar uma função de pesquisa que permita aos usuários encontrar palavras ou frases específicas dentro do texto.
+// 5. Implementar um sistema de login e perfil de usuário para salvar preferências de leitura e progresso.
+// 6. Adicionar um modo de leitura contínua, onde os usuários podem rolar para ler, em vez de clicar em botões de navegação.

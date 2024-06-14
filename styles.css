@@ -207,7 +207,10 @@ footer button:hover {
 }
 
 .text-highlight-button,
-.text-note-button {
+.text-note-button,
+.bookmark-button,
+.highlight-button,
+.unhighlight-button {
   background-color: transparent;
   border: 1px solid #ffffff;
   color: #ffffff;
@@ -218,9 +221,26 @@ footer button:hover {
 }
 
 .text-highlight-button:hover,
-.text-note-button:hover {
+.text-note-button:hover,
+.bookmark-button:hover,
+.highlight-button:hover,
+.unhighlight-button:hover {
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.highlight-color {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.highlight-color option {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .note-container {
@@ -236,21 +256,6 @@ footer button:hover {
   z-index: 1000;
 }
 
-.bookmark-button {
-  background-color: transparent;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  padding: 5px 10px;
-  cursor: pointer;
-  margin: 5px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.bookmark-button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
-
 .bookmark {
   position: absolute;
   top: 0;
@@ -261,4 +266,20 @@ footer button:hover {
   padding: 2px 5px;
   font-size: 12px;
   border-radius: 0 0 5px 5px;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.highlight.green {
+  background-color: green;
+}
+
+.highlight.blue {
+  background-color: blue;
+}
+
+.highlight.red {
+  background-color: red;
 }
