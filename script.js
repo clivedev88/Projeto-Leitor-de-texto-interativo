@@ -7,7 +7,9 @@ const pages = document.querySelectorAll('.page');
 const progressBar = document.querySelector('.progress-bar');
 const increaseFontButton = document.getElementById('increase-font');
 const decreaseFontButton = document.getElementById('decrease-font');
+const bookmarkButton = document.getElementById('bookmark-page');
 let currentPage = 0;
+let bookmarks = [];
 
 // Função para alternar entre temas
 themeToggle.addEventListener('click', () => {
@@ -15,34 +17,33 @@ themeToggle.addEventListener('click', () => {
   body.classList.toggle('light-mode');
 
   if (body.classList.contains('dark-mode')) {
-    themeToggle.innerHTML = '<img src="./App de Leitura/sun-icon-vector-removebg-preview.png" alt="Light Mode" class="light-mode-icon">';
+    themeToggle.innerHTML = '<img src="sun-icon-vector-removebg-preview.png" alt="Light Mode" class="light-mode-icon">';
   } else {
-    themeToggle.innerHTML = '<img src="./App de Leitura/Moon-removebg-preview.png" alt="Dark Mode" class="dark-mode-icon">';
+    themeToggle.innerHTML = '<img src="Moon-removebg-preview.png" alt="Dark Mode" class="dark-mode-icon">';
   }
 });
 
 // Função para exibir a página atual
-// Função para exibir a página atual
-// Função para exibir a página atual
 function showPage(pageNumber) {
-    pages.forEach((page, index) => {
-      if (index === currentPage) {
-        page.classList.remove('next', 'prev');
-      } else if (index < currentPage) {
-        page.classList.remove('next');
-        page.classList.add('prev');
-      } else {
-        page.classList.remove('prev');
-        page.classList.remove('active');
-        page.classList.add('next');
-      }
-      if (index === pageNumber) {
-        page.classList.add('active');
-      }
-    });
-    updateProgressBar(pageNumber); // Atualiza a barra de progresso ao exibir uma nova página
-  }
-    
+  pages.forEach((page, index) => {
+    if (index === currentPage) {
+      page.classList.remove('next', 'prev');
+    } else if (index < currentPage) {
+      page.classList.remove('next');
+      page.classList.add('prev');
+    } else {
+      page.classList.remove('prev');
+      page.classList.remove('active');
+      page.classList.add('next');
+    }
+    if (index === pageNumber) {
+      page.classList.add('active');
+    }
+  });
+  updateProgressBar(pageNumber); // Atualiza a barra de progresso ao exibir uma nova página
+  updateBookmarks(); // Atualiza a exibição dos marcadores de página
+}
+
 // Adicionando a classe 'active' à página inicial
 pages[currentPage].classList.add('active');
 
@@ -96,4 +97,30 @@ function changeFontSize(action) {
   }
 
   pages[currentPage].querySelector('.text').style.fontSize = `${newFontSize}px`;
+}
+
+// Função para marcar ou desmarcar a página atual
+bookmarkButton.addEventListener('click', () => {
+  if (bookmarks.includes(currentPage)) {
+    bookmarks = bookmarks.filter(page => page !== currentPage);
+  } else {
+    bookmarks.push(currentPage);
+  }
+  updateBookmarks();
+});
+
+// Função para atualizar a exibição dos marcadores de página
+function updateBookmarks() {
+  pages.forEach((page, index) => {
+    const existingBookmark = page.querySelector('.bookmark');
+    if (existingBookmark) {
+      existingBookmark.remove();
+    }
+    if (bookmarks.includes(index)) {
+      const bookmark = document.createElement('div');
+      bookmark.classList.add('bookmark');
+      bookmark.textContent = 'Marcado';
+      page.appendChild(bookmark);
+    }
+  });
 }

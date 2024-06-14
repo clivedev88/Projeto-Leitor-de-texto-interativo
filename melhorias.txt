@@ -17,3 +17,25 @@ Modo de tela cheia: Adicione um botão de tela cheia para permitir que os usuár
 Suporte para dispositivos móveis: Certifique-se de que o aplicativo seja responsivo e tenha uma boa experiência de usuário em dispositivos móveis, incluindo gestos de navegação intuitivos, como deslizar para passar as páginas.
 
 Adicionar uma página de configurações: Crie uma página de configurações onde os usuários possam personalizar diferentes aspectos do aplicativo, como o tema padrão, tamanho do texto, preferências de fonte, etc.
+
+Sugestões de Melhorias
+CSS
+Transições Suaves:
+
+Adicionar transições suaves para mudanças de estado dos botões e elementos para melhorar a experiência do usuário.
+Estilos de Foco:
+
+Adicionar estilos para estados de foco (focus) em botões e inputs para melhorar a acessibilidade.
+Tema:
+
+Considerar a adição de mais temas além de claro e escuro para proporcionar uma experiência de leitura personalizada.
+JavaScript
+Aprimorar LocalStorage:
+
+Implementar a capacidade de salvar preferências de usuário, como o tamanho da fonte e o tema escolhido, usando localStorage.
+Navegação por Gestos:
+
+Adicionar suporte para navegação por gestos em dispositivos móveis para uma experiência de usuário mais intuitiva.
+Marcadores:
+
+Adicionar a funcionalidade de marcadores para que os usuários possam marcar páginas importantes e retornar a elas facilmente.
